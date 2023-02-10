@@ -1,4 +1,4 @@
-# 3D_PrinterRetractionTest
+# 3D Printer Retraction Test
 A Retraction test gCode generator that translates user input to an array of print towers to test filament specific retraction settings.
 <br />
 This command line script generates gCode specifically for a printer that uses .9 degree stepper motors, a geared extruder, and a .25mm nozzle on a 190/210mm print bed (Prusa Mk3S) with a .07mm layer height.
