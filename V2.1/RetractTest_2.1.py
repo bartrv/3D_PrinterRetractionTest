@@ -47,7 +47,11 @@ default_Speed = 25 #mm/s
 default_FSpd = default_Speed*60
 ColSectionOffset = 5.18 #mm
 FirstLayerHeight = ""
-gCode_Path = "H:/ClientProjects/VC_GeneralTests/_3DPrint/_Prusa_MK3S_PrinterMaintenance/CalibrationModels/_Custom/"
+
+currentPath = os.path.dirname(os.path.abspath(__file__))
+gCode_Path = currentPath+"/Base_gCode/"
+exportPath = currentPath+"/Export_gCode/"
+print("Current Folder: ",)
 gCodeBaseFile = gCode_Path+"CustomRetract_app_v2_BASE.gcode"
 gCodeColmnFile = gCode_Path+"CustomRetract_app_v2_ColsL1.gcode"
 gCodeToWriteOut = []
@@ -434,7 +438,7 @@ gCodeToWriteOut = gCodeToWriteOut + gCode_Collapsed
 gCodeToWriteOut = gCodeToWriteOut + gCode_footer
 
 #Save out as gCode file - filePath + CustomRetract_app_Output.gcode
-outputFile = gCode_Path+"CustomRetract_app_v2_test.gcode"
+outputFile = exportPath+"CustomRetract_app_v2_test.gcode"
 print("Writing gCode to file...")
 with open(outputFile,"w") as outFile:
 

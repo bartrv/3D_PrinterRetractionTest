@@ -15,7 +15,11 @@ default_Speed = 25 #mm/s
 default_FSpd = default_Speed*60
 ColSectionOffset = 5.18 #mm
 FirstLayerHeight = ""
-gCode_Path = "H:/ClientProjects/VC_GeneralTests/_3DPrint/_Prusa_MK3S_PrinterMaintenance/CalibrationModels/_Custom/"
+
+#Local Path
+gCode_Path = os.path.dirname(os.path.abspath(__file__))+"/"
+print("Current Folder: ",gCode_Path)
+
 gCodeBaseFile = gCode_Path+"CustomRetract_app_BASE.gcode"
 gCodeColmnFile = gCode_Path+"CustomRetract_app_ColsL1.gcode"
 gCodeToWriteOut = []
